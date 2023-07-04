@@ -197,6 +197,7 @@ def user_stats(df):
 
 def raw_data(df):
     """Displays the raw data on bikeshare users"""
+    pd.set_option("display.max_columns", 200)
     print('\nRaw Data Section\n')
     
     all_rows = len(df)
