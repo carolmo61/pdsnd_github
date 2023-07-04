@@ -14,5 +14,5 @@ Explore data related to bike share systems for three major cities in the United 
 `Monteiro_Bikeshare_Project.py`
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+[Programiz](https://www.programiz.com/python-programming/datetime/strftime) was consulted to better understand strftime.    
+[PC-algorithms](https://pc-algorithms.readthedocs.io/en/latest/flowcharts/While_loops.html) was referenced to further understand while loops.
