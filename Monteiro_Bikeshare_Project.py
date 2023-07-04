@@ -185,8 +185,8 @@ def user_stats(df):
         print('Earliest birth year:', df['Birth Year'].min())
         
         pop_birth = df['Birth Year'].mode()[0]
-        count_pop_birth = df['Birth Year'].value_counts()[pop_birth]
-        print(f'Most Common Birth Year is {pop_birth}. This year appeared {count_pop_birth} times.')
+        pop_birth_count = df['Birth Year'].value_counts()[pop_birth]
+        print(f'Most Common Birth Year is {pop_birth}. This year appeared {pop_birth_count} times.')
         
     except:
         print('No data provided for the user birth year.')
@@ -197,6 +197,7 @@ def user_stats(df):
 
 def raw_data(df):
     """Displays the raw data on bikeshare users"""
+    pd.set_option("display.max_columns", 200)
     print('\nRaw Data Section\n')
     
     all_rows = len(df)
@@ -206,6 +207,7 @@ def raw_data(df):
     while start_row < all_rows:
         response = input('Would you like to see 5 rows of data? ').lower()
     
+    # display user requested data
         if response.lower() == 'yes':
             print(df.iloc[start_row:start_row+5])
             start_row += 5
