@@ -185,8 +185,8 @@ def user_stats(df):
         print('Earliest birth year:', df['Birth Year'].min())
         
         pop_birth = df['Birth Year'].mode()[0]
-        count_pop_birth = df['Birth Year'].value_counts()[pop_birth]
-        print(f'Most Common Birth Year is {pop_birth}. This year appeared {count_pop_birth} times.')
+        pop_birth_count = df['Birth Year'].value_counts()[pop_birth]
+        print(f'Most Common Birth Year is {pop_birth}. This year appeared {pop_birth_count} times.')
         
     except:
         print('No data provided for the user birth year.')
