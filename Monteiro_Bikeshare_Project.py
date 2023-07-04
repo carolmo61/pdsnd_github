@@ -207,6 +207,7 @@ def raw_data(df):
     while start_row < all_rows:
         response = input('Would you like to see 5 rows of data? ').lower()
     
+    # display user requested data
         if response.lower() == 'yes':
             print(df.iloc[start_row:start_row+5])
             start_row += 5
